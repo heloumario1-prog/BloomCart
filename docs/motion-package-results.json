@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-27",
+  "browser": "155.0.8059.85",
+  "base": "http://127.0.0.1:8000/motion-verification/BloomCart/",
+  "checks": [
+    "Drawer 270ms transform and backdrop opacity: entry, exit visibility, focus, locks and stable layout",
+    "Purchase fade/10px movement/scale, exit visibility and Escape/backdrop/close dismissal",
+    "Immediate exact cart update, success label, duplicate-submit protection, badge pulse and toast entrance",
+    "Toast hover and keyboard pause, automatic animated expiry, explicit animated dismissal and View cart",
+    "Reopen during exit reverses current transform without stale completion, backdrop or locks",
+    "Rapid open/close, overlay switching and new toast during old exit do not duplicate or leave stuck UI",
+    "Reduced motion: no modal/toast movement or badge pulse; changing preference finishes an in-flight exit",
+    "Five mobile/desktop widths: animated overlays fit, scroll internally, avoid overflow and release locks",
+    "Controls: hover/focus/pressed transitions; touch uses no hover transforms and toast expires",
+    "No console/page errors or failed assets"
+  ],
+  "errors": [],
+  "failed": []
+}

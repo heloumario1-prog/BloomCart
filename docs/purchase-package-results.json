@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-27",
+  "browser": "155.0.8059.85",
+  "base": "http://127.0.0.1:8000/motion-verification/BloomCart/",
+  "checks": [
+    "Header normal, hover, focus, current and pressed CSS states",
+    "Scroll and navigation update the single current section; reduced motion applies",
+    "Product dialog opens at 1 with photo/name/unit price/total and no cart mutation",
+    "Quantity plus/minus/edit and blank/fractional/negative/nonnumeric/excessive validation",
+    "Dialog Tab containment, inert background, scroll lock and all dismissal paths",
+    "Rapid confirmation adds exact quantity once, persists and announces without toast focus",
+    "Toast hover pauses dismissal; View cart opens only drawer and returns focus safely",
+    "Toast keyboard focus pauses, leaving resumes, five-second expiry and explicit dismissal",
+    "Per-product cart capacity rejects overflow without truncation; valid repeat adds exactly",
+    "320/390/768/1024/1440 layouts: dialog, toast, cart, images and menu remain usable",
+    "Screenshots of new purchase and confirmation flow",
+    "No console errors, uncaught exceptions, failed assets or requests"
+  ],
+  "errors": [],
+  "failed": []
+}

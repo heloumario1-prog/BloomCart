@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BloomCart | Floral &amp; Gift Boutique</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3d2b'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-size='46' fill='%23faf6ee' font-family='Georgia'%3EB%3C/text%3E%3C/svg%3E">
+<meta name="description" content="BloomCart is a demo floral and gift boutique storefront.">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/products.js" defer></script><script src="js/app.js" defer></script></head>
+<body>
+<a class="skip" href="#catalog">Skip to products</a>
+<header class="site-header"><div class="bar">
+ <a class="brand" href="#top">BloomCart</a>
+ <button class="icon-btn menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+ <nav id="nav" class="nav" aria-label="Main"><a href="#top" aria-current="location">Home</a><a href="#catalog">Shop</a><a href="#about">About</a></nav>
+ <form class="search" role="search" id="searchForm"><label class="sr" for="search">Search products</label><input id="search" type="search" placeholder="Search flowers or gifts" autocomplete="off"></form>
+ <button class="icon-btn cart-btn" id="cartBtn" aria-haspopup="dialog" aria-label="Open cart, 0 items">Cart <span class="badge" id="badge">0</span></button>
+</div></header>
+<main id="top">
+<section class="hero"><div><h1>Flowers and gifts for every occasion</h1><p>Bouquets, plants and thoughtful gifts.</p><a class="btn" href="#catalog">Shop bouquets</a></div><img src="assets/images/hero.jpg" alt="Hands tying a ribbon around a fresh pink bouquet on a florist’s table" width="800" height="800"></section>
+<section id="catalog" class="wrap" aria-labelledby="catTitle"><h2 id="catTitle">Shop the collection</h2>
+<p class="note">Demo data: products, prices, ratings and reviews are samples.</p>
+<div class="tools"><div class="filters" id="filters" role="group" aria-label="Category filters"></div>
+<div><label for="sort">Sort by</label> <select id="sort"><option value="featured">Featured</option><option value="asc">Price: low to high</option><option value="desc">Price: high to low</option></select></div></div>
+<p id="count" class="count"></p>
+<div id="grid" class="grid"></div>
+<div id="empty" class="empty" hidden><p>No products match your search.</p><button class="btn" id="reset">Reset search and filters</button></div></section>
+<section id="about" class="wrap about"><h2>About BloomCart</h2><p>BloomCart is a student-built demonstration of a floral and gift boutique storefront, focused on clear layout, accessible controls and a simple shopping cart.</p></section>
+</main>
+<footer class="foot">Frontend project by Mario El Helou.</footer>
+<div id="backdrop" class="backdrop" hidden></div>
+<aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" tabindex="-1" hidden>
+<div class="d-head"><h2 id="drawerTitle">Your cart</h2><button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button></div>
+<p class="note">Demo only: there is no checkout or payment.</p>
+<ul id="items" class="items"></ul><p id="cartEmpty">Your cart is empty.</p>
+<p class="subtotal">Subtotal: <strong id="subtotal">$0.00</strong></p></aside>
+<section id="purchaseDialog" class="purchase-dialog" role="dialog" aria-modal="true" aria-labelledby="purchaseTitle" tabindex="-1" hidden>
+ <div class="d-head"><p class="cat">A thoughtful choice</p><button type="button" class="icon-btn" id="closePurchase" aria-label="Close product dialog">✕</button></div>
+ <div class="purchase-product"><img id="purchaseImage" alt="" width="160" height="160"><div><h2 id="purchaseTitle"></h2><p>Unit price: <strong id="purchasePrice"></strong></p></div></div>
+ <form id="purchaseForm" novalidate>
+  <label for="purchaseQty">Quantity</label>
+  <div class="quantity-selector"><button type="button" class="icon-btn" id="purchaseMinus" aria-label="Decrease selected quantity">−</button><input id="purchaseQty" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" required aria-describedby="quantityHint quantityError"><button type="button" class="icon-btn" id="purchasePlus" aria-label="Increase selected quantity">+</button></div>
+  <p id="quantityHint" class="quantity-hint">Choose a whole number from 1 to 99.</p>
+  <p id="quantityError" class="quantity-error" role="alert" hidden></p>
+  <p class="purchase-total">Total <strong id="purchaseTotal"></strong></p>
+  <button type="submit" class="btn" id="confirmPurchase">Add to cart</button>
+ </form>
+</section>
+<div id="toast" class="toast" role="region" aria-label="Cart confirmation" hidden><span class="toast-mark" aria-hidden="true">✓</span><p id="toastMessage"></p><button type="button" class="toast-action" id="toastCart">View cart</button><button type="button" class="toast-close" id="closeToast" aria-label="Dismiss confirmation">✕</button></div>
+<div id="live" class="sr" aria-live="polite" role="status"></div>
+</body></html>
